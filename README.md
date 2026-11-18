@@ -4,7 +4,7 @@ SSH into this machine from anywhere, through a [Cloudflare Tunnel](https://devel
 
 The machine only makes an outbound TLS connection (with SNI `h2.cftunnel.com`, TCP 7844) to Cloudflare, so it works behind double NAT with no public IP, and through campnet, which drops connections without a host header / SNI (and with it, raw SSH and WireGuard).
 
-Keep campnet logged in with the [auto-campnet daemon](../README.md) — the tunnel reconnects on its own whenever the network comes back.
+Keep campnet logged in with the [auto-campnet daemon](https://github.com/khrj/bits-auto-campnet) — the tunnel reconnects on its own whenever the network comes back.
 
 ## Prerequisites
 
